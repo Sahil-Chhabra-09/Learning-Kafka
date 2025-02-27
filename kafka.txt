@@ -1,0 +1,36 @@
+* throughput -> the amount of material or items passing through a system or process
+
+##USE CASES
+* zomato -> live location updates
+	solution: each second, current location sent to zm-server, and from server to db and client
+	problem: too much data to handle, ops(operation per second) too high, db throughput i.e. ops is very low
+	
+* discord -> chats are recieved at server, server stores in db as well as sends to client
+	problem: too high ops, can't achieve real time
+	
+* ola, uber -> real time driver location updates, fare calculations, etc.
+
+
+## KAFKA
+
+* kafka has high throughput, high ops, kafka ke andar millions of records insert krna, nikalna is easy as compared to db
+* storage of kafka is temporary and can't hold data for long
+* db queries on kafka is not possible
+
+
+## Architecture
+
+eg1 : user's live location data (producer) -> fed to kafka -> {fare, analysis, customer update} (consumers) -> bulk insertion to database
+
+
+eg2 : zomato's delivery partner (producer) -> data to kafka -> {analysis, customer update} (consumer) -> db bulk update
+
+
+## Kafka's internal stuff
+
+producer -> kafka -> consumer
+
+
+* topic -> a logical channel that organizes and stores streams of events, eg: rider updates one topic, restaurant updates another topic
+
+* producer -> produces data to different topics, 
