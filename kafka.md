@@ -110,3 +110,9 @@ confluentinc/cp-kafka -> name of the kafka image
 ADMIN does the infra setup like topics creation, partitions creation
 
 kafka application is also called broker
+
+<mark>STEP-3: Running a program where an admin configures the topic and the partitions, and a producer and a consumer</mark>
+
+Refer the code, now, in that, if we increase the consumers, the same logic can be seen, one consumer consumes messages of both partitions, if we add another, self balancing happens and one consumer listens to one partition and other to other, if we add another consumer, consumer 3 remains empty
+
+The logic of if we add a consumer to another group can also be verified by the code above, it starts consuming messages from both the partitions
