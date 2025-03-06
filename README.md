@@ -51,7 +51,7 @@ eg1:
 
 Let's say we have one producer, one topic, 4 partitions and one consumer
 
-every partition will then be consumed by just one consumer, if another consumer is added, the partition blocks are divided equally, but, the partitions do not get divided further, that means, the
+every partition will then be consumed by just one consumer, if another consumer is added, the partition blocks are divided equally, but, the partitions do not get divided further after there are 4 consumers, that means, the
 
 !["Consumer diag"](./Screenshot_2025-02-25-18-48-47-01_f9ee0578fe1cc94de7482bd41accb329.jpg)
 
