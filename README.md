@@ -116,3 +116,7 @@ kafka application is also called broker
 Refer the code, now, in that, if we increase the consumers, the same logic can be seen, one consumer consumes messages of both partitions, if we add another, self balancing happens and one consumer listens to one partition and other to other, if we add another consumer, consumer 3 remains empty
 
 The logic of if we add a consumer to another group can also be verified by the code above, it starts consuming messages from both the partitions
+
+<mark>STEP-4: Running the kafka UI</mark>
+
+> sudo docker run --name kafka-ui -it -p 8080:8080 -e DYNAMIC_CONFIG_ENABLED=true -d provectuslabs/kafka-ui
