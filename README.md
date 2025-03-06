@@ -39,7 +39,7 @@ Different partitions can have different consumers
 
 !["kafka internal architecture"](./IMG20250225184323.jpg)
 
-## Technicials
+## Technicals
 
 ### Partitions:
 
